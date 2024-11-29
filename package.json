@@ -1,9 +1,9 @@
 {
-  "name": "svgaplayerweb",
-  "version": "2.3.2",
+  "name": "svgaplayerweb-enhance",
+  "version": "2.3.3",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yyued/SVGAPlayer-Web.git"
+    "url": "https://github.com/chrisma2012/SVGAPlayer-Web-Enhance.git"
   },
   "main": "./build/svga.min.js",
   "types": "index.d.ts",
@@ -11,7 +11,7 @@
     "start": "http-server ./ & webpack -w & open http://127.0.0.1:8080/tests/",
     "build": "webpack"
   },
-  "author": "YYUED",
+  "author": "YYUED chris",
   "license": "Apache License 2.0",
   "dependencies": {},
   "devDependencies": {
