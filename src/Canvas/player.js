@@ -302,4 +302,9 @@ export class Player {
         this._renderer.playAudio(this._currentFrame);
     }
 
+    destroy(){
+        this._container.removeChild(this._drawingCanvas)
+        delete this._drawingCanvas
+        this._renderer.destroy();
+    }
 }

@@ -18,6 +18,7 @@ export class VideoEntity {
 
 export class Parser {
     load(url: string, success: (videoItem: VideoEntity) => void, failure?: (err: Error) => void): void
+    destroy():void
 }
 
 export class Player {
@@ -50,7 +51,7 @@ export class Player {
     onFrame(callback: (frame: number) => void): void
     onPercentage(callback: (percentage: number) => void): void
     drawOnContext(ctx: CanvasRenderingContext2D, x: number, y: number, width?: number, height?: number): void
-
+    destroy():void
 }
 
 export class CreatejsPlayer extends Player {

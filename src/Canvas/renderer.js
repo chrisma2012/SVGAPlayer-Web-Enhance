@@ -501,4 +501,8 @@ export class Renderer {
         }
         ctx.restore();
     }
+
+    destroy() {
+        this._bitmapCache = null;
+    }
 }
