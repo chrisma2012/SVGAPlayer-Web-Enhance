@@ -302,9 +302,17 @@ export class Player {
         this._renderer.playAudio(this._currentFrame);
     }
 
+    //优化后新加代码
     destroy(){
-        this._container.removeChild(this._drawingCanvas)
-        delete this._drawingCanvas
+        this._animator.stop(); //停止帧动画
+        this._animator = null; //
+        if(this._drawingCanvas){
+            this._container.removeChild(this._drawingCanvas)
+            delete this._drawingCanvas
+        }
         this._renderer.destroy();
+        this._renderer = null;
+        this._videoItem = null;
+        this.clearDynamicObjects()
     }
 }
